@@ -310,7 +310,7 @@ class CoreExport ClientProtocol::Messages::Mode : public ClientProtocol::Message
 		, beginit(beginiter)
 	{
 		PushParamRef(GetStrTarget());
-		PushParam(ToModeLetters(changelist.getlist(), 450, beginit, lastit));
+		PushParam(ToModeLetters(changelist.getlist(), 1028, beginit, lastit));
 		PushModeParams();
 	}
 
@@ -327,7 +327,7 @@ class CoreExport ClientProtocol::Messages::Mode : public ClientProtocol::Message
 		, beginit(changelist.getlist().begin())
 	{
 		PushParamRef(GetStrTarget());
-		PushParam(ToModeLetters(changelist.getlist(), 450, beginit, lastit));
+		PushParam(ToModeLetters(changelist.getlist(), 1028, beginit, lastit));
 		PushModeParams();
 	}
 
@@ -355,7 +355,7 @@ class CoreExport ClientProtocol::Messages::Mode : public ClientProtocol::Message
 		beginit = changelist.getlist().begin();
 
 		PushParamRef(GetStrTarget());
-		PushParam(ToModeLetters(changelist.getlist(), 450, beginit, lastit));
+		PushParam(ToModeLetters(changelist.getlist(), 1028, beginit, lastit));
 		PushModeParams();
 	}
 
