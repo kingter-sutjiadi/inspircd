@@ -256,7 +256,7 @@ class CoreExport ClientProtocol::Messages::Mode : public ClientProtocol::Message
 
 			if (!item.param.empty())
 				paramlength += item.param.length() + 1;
-			if (ret.length() + 1 + paramlength > maxlinelen)
+			if (ret.length() + 1 + paramlength > 1024)
 			{
 				// Mode sequence is getting too long
 				const char c = *ret.rbegin();

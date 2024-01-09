@@ -38,7 +38,7 @@
 #include <iostream>
 
 ServerLimits::ServerLimits(ConfigTag* tag)
-	: MaxLine(tag->getUInt("maxline", 512, 512))
+	: MaxLine(tag->getUInt("maxline", 2048, 2048))
 	, NickMax(tag->getUInt("maxnick", 30, 1, MaxLine))
 	, ChanMax(tag->getUInt("maxchan", 64, 1, MaxLine))
 	, MaxModes(tag->getUInt("maxmodes", 20, 1))
